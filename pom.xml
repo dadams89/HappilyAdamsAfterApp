@@ -195,6 +195,7 @@
 	<dependency>
 	<groupId>org.reactivestreams</groupId>
 	<artifactId>reactive-streams</artifactId>
+	<version>1.0.2</version>
 	<scope>compile</scope>
 	<optional>true</optional>
 	</dependency>
@@ -205,10 +206,36 @@
 	<scope>compile</scope>
 	</dependency>
 	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-websocket</artifactId>
+	    <version>5.0.2.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>5.0.2.RELEASE</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webflux -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webflux</artifactId>
+	    <version>5.0.2.RELEASE</version>
+	</dependency>
+	<dependency>
 	<groupId>org.springframework</groupId>
 	<artifactId>spring-beans</artifactId>
 	<version>5.0.2.RELEASE</version>
 	<scope>compile</scope>
+	</dependency>
+	<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>5.0.2.RELEASE</version>
+	</dependency>
+	<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-tx</artifactId>
+    <version>5.0.2.RELEASE</version>
 	</dependency>
 	<dependency>
 	<groupId>org.springframework</groupId>
@@ -249,6 +276,16 @@
 	<scope>compile</scope>
 	</dependency>
 	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>5.1.39</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-orm</artifactId>
+	    <version>5.0.2.RELEASE</version>
+	</dependency>
+	<dependency>
 	<groupId>org.webjars</groupId>
 	<artifactId>webjars-locator</artifactId>
 	<version>0.32-1</version>
@@ -262,9 +299,14 @@
 	<scope>provided</scope>
 	</dependency>
 	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jms</artifactId>
+	    <version>5.0.2.RELEASE</version>
+	</dependency>
+	<dependency>
 	    <groupId>org.hibernate</groupId>
 	    <artifactId>hibernate-core</artifactId>
-	    <version>5.2.16.Final</version>
+	    <version>5.0.1.Final</version>
 	</dependency>
 	<dependency>
       <groupId>org.jboss.logging</groupId>
@@ -284,6 +326,11 @@
       <version>3.22.0-GA</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+	    <groupId>com.mchange</groupId>
+	    <artifactId>c3p0</artifactId>
+	    <version>0.9.5.2</version>
+	</dependency>
     <dependency>
       <groupId>antlr</groupId>
       <artifactId>antlr</artifactId>
@@ -309,6 +356,11 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
+	    <groupId>commons-logging</groupId>
+	    <artifactId>commons-logging</artifactId>
+	    <version>1.2</version>
+	</dependency>
+    <dependency>
       <groupId>dom4j</groupId>
       <artifactId>dom4j</artifactId>
       <version>1.6.1</version>
@@ -325,6 +377,16 @@
       <artifactId>hibernate-commons-annotations</artifactId>
       <version>5.0.1.Final</version>
       <scope>compile</scope>
+    </dependency>
+    <dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-c3p0</artifactId>
+	    <version>5.0.1.Final</version>
+	</dependency>
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-web</artifactId>
+        <version>5.0.2.RELEASE</version>
     </dependency>
   </dependencies>
   <build>
