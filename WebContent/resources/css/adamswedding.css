@@ -1,0 +1,28 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.navbar{
+	font-family: 'Crimson Text', serif;
+	font-size: 1.1rem;
+}
+.container-fluid{
+	font-family: 'IBM Plex Serif', serif;
+	font-size: 1rem;
+}
+.navbar-nav > .nav-item {
+	padding-left: .3rem;
+	padding-right: .3rem;
+}
+body {
+	background-image: url("https://dl.dropboxusercontent.com/s/0x2rnwhelwg91z2/keith-misner-308-unsplash.jpg?dl=0");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	background-position: center;
+	background-attachment: fixed;
+	font-size: .9rem;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(6, 4, 4);
+}
