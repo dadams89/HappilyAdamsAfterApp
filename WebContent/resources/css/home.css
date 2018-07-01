@@ -1,3 +1,6 @@
 body {
-	background-image: url("https://dl.dropboxusercontent.com/s/l5l9nri715knk86/DSC_2151.jpg?dl=0")!important;
+	background-image: url("https://res.cloudinary.com/daeklz7vq/image/upload/v1523318972/DSC_2151.jpg")!important;
+}
+.footer {
+  position: absolute!important;
 }

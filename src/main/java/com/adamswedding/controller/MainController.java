@@ -1,7 +1,11 @@
 package com.adamswedding.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.adamswedding.entity.Guest;
 
 import groovy.ui.Console;
 
@@ -9,30 +13,30 @@ import groovy.ui.Console;
 public class MainController {
 	
 	@RequestMapping("/")
-	public String showPage(){
-		System.out.println("in showPage");
-		return "rsvp";
+	public String defaultHandler(){
+		return "login";
+	}
+	
+	@RequestMapping("/check")
+	public ModelAndView checkRsvp(){
+		return new ModelAndView("login", "command", new Guest());
+	}
+	
+	@RequestMapping("/photos")
+	public String showPhotos(){
+		System.out.println("in showPhotos");
+		return "photos";
 	}
 	
 	@RequestMapping("/home")
 	public String showHome(){
 		System.out.println("in showHome");
-	return "home";
+		return "home";
 	}
 	
 	@RequestMapping("/how-to-get-there")
 	public String showHowTo(){
 	return "how-to-get-there";
-	}
-	
-	@RequestMapping("/rsvp")
-	public String showRSVP(){
-	return "rsvp";
-	}
-	
-	@RequestMapping("/processrsvp")
-	public String processRSVP(){
-	return "rsvp";
 	}
 	
 	@RequestMapping("/wedding-party")

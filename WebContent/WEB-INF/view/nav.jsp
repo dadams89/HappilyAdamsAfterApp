@@ -12,6 +12,9 @@
 	    <a class="nav-link" href="${pageContext.request.contextPath}/our-story">Our Story</a>
 	  </li>
 	  <li class="nav-item">
+	    <a class="nav-link" href="${pageContext.request.contextPath}/photos">Our Story</a>
+	  </li>
+	  <li class="nav-item">
 	    <a class="nav-link" href="${pageContext.request.contextPath}/wedding-party">Wedding Party</a>
 	  </li>
 	  <li class="nav-item">
