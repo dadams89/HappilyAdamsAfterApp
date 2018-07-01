@@ -21,6 +21,7 @@
 	    <div class="col-10">
 	    </div>
 	    <div class="col">
+			
 	    </div>
 	  </div>
 	</div>
