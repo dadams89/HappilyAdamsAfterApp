@@ -34,59 +34,59 @@ public class PopulateDbTest {
 	public void PopDb() {
 		List<Guest> list = new ArrayList<>();
 		Guest guest = new Guest();
-		guest.setFirstName("TJ");
-		guest.setLastName("King");
+		guest.setFirstName("Maria");
+		guest.setLastName("Vuchinich");
 		guest.setComing(0);
 		guest.setEmail("");
 		guest.setGuestNames("");
 		guest.setComments("");
-		guest.setPlusOne(0);
+		guest.setPlusOne(1);
 		guest.setRsvpd(0);
 		list.add(guest);
-		
-		Guest guest2 = new Guest();
-		guest2.setFirstName("Edward");
-		guest2.setLastName("Bowman");
-		guest2.setComing(0);
-		guest2.setEmail("");
-		guest2.setGuestNames("");
-		guest2.setComments("");
-		guest2.setPlusOne(0);
-		guest2.setRsvpd(0);
-		list.add(guest2);
-		
-		Guest guest3 = new Guest();
-		guest3.setFirstName("Emily");
-		guest3.setLastName("Bowman");
-		guest3.setComing(0);
-		guest3.setEmail("");
-		guest3.setGuestNames("");
-		guest3.setComments("");
-		guest3.setPlusOne(0);
-		guest3.setRsvpd(0);
-		list.add(guest3);
-		
-		Guest guest4 = new Guest();
-		guest4.setFirstName("Michael");
-		guest4.setLastName("Bowman");
-		guest4.setComing(0);
-		guest4.setEmail("");
-		guest4.setGuestNames("");
-		guest4.setComments("");
-		guest4.setPlusOne(0);
-		guest4.setRsvpd(0);
-		list.add(guest4);
-		
-		Guest guest5 = new Guest();
-		guest5.setFirstName("Lindsay");
-		guest5.setLastName("Friedel");
-		guest5.setComing(0);
-		guest5.setEmail("");
-		guest5.setGuestNames("");
-		guest5.setComments("");
-		guest5.setPlusOne(1);
-		guest5.setRsvpd(0);
-		list.add(guest5);
+//		
+//		Guest guest2 = new Guest();
+//		guest2.setFirstName("Edward");
+//		guest2.setLastName("Bowman");
+//		guest2.setComing(0);
+//		guest2.setEmail("");
+//		guest2.setGuestNames("");
+//		guest2.setComments("");
+//		guest2.setPlusOne(0);
+//		guest2.setRsvpd(0);
+//		list.add(guest2);
+//		
+//		Guest guest3 = new Guest();
+//		guest3.setFirstName("Emily");
+//		guest3.setLastName("Bowman");
+//		guest3.setComing(0);
+//		guest3.setEmail("");
+//		guest3.setGuestNames("");
+//		guest3.setComments("");
+//		guest3.setPlusOne(0);
+//		guest3.setRsvpd(0);
+//		list.add(guest3);
+//		
+//		Guest guest4 = new Guest();
+//		guest4.setFirstName("Michael");
+//		guest4.setLastName("Bowman");
+//		guest4.setComing(0);
+//		guest4.setEmail("");
+//		guest4.setGuestNames("");
+//		guest4.setComments("");
+//		guest4.setPlusOne(0);
+//		guest4.setRsvpd(0);
+//		list.add(guest4);
+//		
+//		Guest guest5 = new Guest();
+//		guest5.setFirstName("Lindsay");
+//		guest5.setLastName("Friedel");
+//		guest5.setComing(0);
+//		guest5.setEmail("");
+//		guest5.setGuestNames("");
+//		guest5.setComments("");
+//		guest5.setPlusOne(1);
+//		guest5.setRsvpd(0);
+//		list.add(guest5);
 		
 //		Guest guest6 = new Guest();
 //		guest6.setFirstName("Savannah");

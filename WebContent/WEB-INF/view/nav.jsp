@@ -4,7 +4,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mx-auto">
+    <ul class="navbar-nav mx-auto" style="padding-left: 2rem;">
 	  <li class="nav-item">
 	    <a class="nav-link" href="${pageContext.request.contextPath}/home">Home</a>
 	  </li>
@@ -12,13 +12,10 @@
 	    <a class="nav-link" href="${pageContext.request.contextPath}/our-story">Our Story</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" href="${pageContext.request.contextPath}/photos">Our Story</a>
+	    <a class="nav-link" href="${pageContext.request.contextPath}/photos">Photos</a>
 	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link" href="${pageContext.request.contextPath}/wedding-party">Wedding Party</a>
-	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link" href="${pageContext.request.contextPath}/how-to-get-there">How To Get There</a>
 	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link" href="${pageContext.request.contextPath}/details">Details</a>
@@ -29,9 +26,7 @@
 	  <li class="nav-item">
 	    <a class="nav-link" href="${pageContext.request.contextPath}/registry">Registry</a>
 	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link" href="${pageContext.request.contextPath}/rsvp">RSVP</a>
-	  </li>
 	</ul>
+	<a href="${pageContext.request.contextPath}/action/logout"><button type="button" class="btn btn-secondary float-right">RSVP</button></a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/home.css" />
-    <title>Happily Adams After</title>
+    <title>#HappilyAdamsAfter</title>
     <%@ include file="/WEB-INF/view/linksandscripts.jsp" %>
   </head>
   <body>

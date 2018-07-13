@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happily Adams After</title>
+    <title>#HappilyAdamsAfter</title>
     <%@ include file="/WEB-INF/view/linksandscripts.jsp" %>
   </head>
   <body>
@@ -21,7 +21,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mx-auto">
 	  <li class="nav-item">
-	    Happily Adams After
+	    #HappilyAdamsAfter
 	    <br>
 	  </li>
 	</ul>
@@ -37,6 +37,8 @@
 	    		<div class="alert alert-danger mb-3 text-center" role="alert">
 				  Unfortunately, we couldn't find your name on the list!<br>
 				  Please try to re-enter your name in a different way to check again.
+				  If all else fails, contact us!
+				  <br><br>Sincerely,<br> the Bride and Groom.
 				</div>
 	    	</c:if>
 			<div class="card bg-light">
@@ -44,11 +46,11 @@
 				    <form:form action="${pageContext.request.contextPath}/action/validate" method="POST" modelAttribute="Guest">
 					  <div class="form-group">
 					    <label for="firstName">First Name</label>
-					    <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name">
+					    <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name as it appears on your invitation...">
 					  </div>
 					  <div class="form-group">
 					    <label for="lastName">Last Name</label>
-					    <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name">
+					    <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name as it appears on your invitation...">
 					  </div>
 					  <button type="submit" class="btn btn-secondary mt-2">Submit</button>
 					</form:form>

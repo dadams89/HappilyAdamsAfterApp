@@ -29,8 +29,10 @@
 		<div class="row align-items-center m-5 text-center">
 		    <div class="col">
 		    </div>
-		    <div class="col-10">
-		    	<h5 style="color: white;">Marisa &amp; Daniel</h5>
+		    <div class="col-3" style="opacity: .8;">
+		    	<div class="bg-light rounded-circle" style="height: 3.5rem;">
+		    		<h5 class="pt-3"><b>Marisa & Daniel</b></h5>
+		    	</div>
 		    </div>
 		    <div class="col">
 		    </div>

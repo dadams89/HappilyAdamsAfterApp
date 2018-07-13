@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happily Adams After</title>
+    <title>#HappilyAdamsAfter</title>
     <style>
     .form-check-label{
     	    font-size: .8rem;
@@ -18,7 +18,20 @@
   </head>
   <body>
     <!-- HEADER -->
-	<%@ include file="/WEB-INF/view/nav.jsp" %>
+	<nav class="navbar navbar-expand-md navbar-light bg-light" style="opacity: .8;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+	  <li class="nav-item">
+	    #HappilyAdamsAfter
+	    <br>
+	  </li>
+	</ul>
+  </div>
+</nav>
 	
 	<div class="container-fluid">
 	  <div class="row align-items-center mt-5 mb-5">
@@ -70,6 +83,7 @@
 					    <textarea class="form-control" name="comments" id="comments" placeholder="Comments..." rows="5"></textarea>
 					  </div>
 					  <button type="submit" class="btn btn-secondary">Submit</button>
+					  <a href="${pageContext.request.contextPath}/action/logout"><button type="button" class="btn btn-secondary float-right">Go back to re-enter Name</button></a>
 					</form:form>
 				</div>
 			</div>

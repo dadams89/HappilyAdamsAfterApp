@@ -31,7 +31,7 @@ public class RsvpCheckController {
 
 	@RequestMapping(value="/action/validate",  method=RequestMethod.POST)
 	public String validateRsvpd(HttpServletRequest request, ModelMap model,
-								@ModelAttribute("Guest") Guest guest,BindingResult result) 
+								@ModelAttribute("Guest") Guest guest) 
 	{
 		String view = "rsvp";
 		HttpSession session = request.getSession();
@@ -41,6 +41,8 @@ public class RsvpCheckController {
 				//Not RSVP'd
 				guest = dao.getGuestByName(guest.getFirstName(), guest.getLastName());
 				if (!StringUtils.isEmpty(guest.getFirstName()) && !StringUtils.isEmpty(guest.getLastName()) && guest.getComing() > -1) {
+					
+					session.setAttribute("guest", guest);
 				
 					if (guest.getPlusOne() == 1) {
 						model.addAttribute("guestPlusOne", true);
@@ -57,7 +59,7 @@ public class RsvpCheckController {
 						System.out.println("is rsvpd");
 					} 
 					
-					model.addAttribute("guest", guest);
+					//model.addAttribute("guest", guest);
 					
 				}else {
 					view = "login";
@@ -72,7 +74,7 @@ public class RsvpCheckController {
 		} catch (Exception e) {
 			view = "login";
 			session.setAttribute("isRsvpd", "no");
-			e.printStackTrace();
+			System.err.println(e.getMessage());
 		}
 		
 		if (view.equalsIgnoreCase("login")) {
@@ -80,19 +82,19 @@ public class RsvpCheckController {
 			model.addAttribute(new Guest());
 		}
 		
-		System.out.println("Before ending model view = " + "rsvp");
+		System.out.println("Before ending model view = " + view);
 
 		return view;
 	}
 	
 	@RequestMapping("/rsvp")
-	public String showRSVP(){
+	public String showRSVP(ModelMap model, @ModelAttribute("Guest") Guest guest){
 		return "rsvp";
 	}
 	
 	@RequestMapping(value="/action/submit",  method=RequestMethod.POST)
 	public String submitRsvpd(HttpServletRequest request, ModelMap model,
-			@ModelAttribute("Guest") Guest guest,BindingResult result) 
+			@ModelAttribute("Guest") Guest guest) 
 	{
 		String view = "home";
 		HttpSession session = request.getSession();
@@ -113,6 +115,8 @@ public class RsvpCheckController {
 					if(dao.create(guest)) {
 						System.out.println("Added/Updated Guest: " + guest.getFirstName() + " " + guest.getLastName() + " has been created and RSVP'd");
 					}
+					
+					session.setAttribute("guest", guest);
 					
 				}else {
 					view = "rsvp";
@@ -136,11 +140,32 @@ public class RsvpCheckController {
 			view = "rsvp";
 			model.addAttribute("error", true);
 			session.setAttribute("isRsvpd", "no");
-			e.printStackTrace();
+			System.err.println(e.getMessage());
 		}
 		
 		System.out.println("Before ending model view = " + view);
 
+		return view;
+	}
+	
+	@RequestMapping("/action/logout")
+	public String logout(HttpServletRequest request, ModelMap model,
+			@ModelAttribute("Guest") Guest guest){
+		String view = "login";
+		HttpSession session = request.getSession();
+		
+		try {
+			if (session.getAttribute("guest") != null) {
+				session.removeAttribute("guest");
+			}
+			
+			session.setAttribute("isRsvpd", "no");
+			
+		} catch (Exception e) {
+			System.err.println("Could not log guest out!");
+			System.err.println(e.getMessage());
+		}
+	
 		return view;
 	}
 	

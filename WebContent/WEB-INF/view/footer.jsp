@@ -7,7 +7,7 @@
 	    	<span class="text-muted">Thank you!</span>
 	    </div>
 	    <div class="col">
-	    	<span class="text-muted">&copy;2018 by Daniel & Marisa</span>
+	    	<span class="text-muted">&copy;2018 authored by the Groom</span>
 	    </div>
 	    <div class="col">
 	    	<span class="text-muted">September 15th, 2018</span>

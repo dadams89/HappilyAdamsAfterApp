@@ -4,8 +4,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.httpclient.Header;
+import org.owasp.esapi.ESAPI;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.adamswedding.entity.Guest;
 
 public class LoginInterceptor implements HandlerInterceptor {
 	
@@ -16,6 +20,19 @@ public class LoginInterceptor implements HandlerInterceptor {
 		
 		try {
 			System.out.println(request.getRequestURI());
+			Guest sessionGuest =null;
+			
+			try {
+				sessionGuest = (Guest) session.getAttribute("guest");
+			} catch (Exception e) {
+				System.out.println("Session guest is null");
+			}
+			
+			if (sessionGuest != null) {
+				System.out.println("Session guest name is " + sessionGuest.getFirstName() + " " + sessionGuest.getLastName());
+			}else {
+				System.out.println("Session guest is null");
+			}
 			
 			//Add any exclusions here
 			if (!request.getRequestURI().startsWith(request.getContextPath() + "/resources") 
@@ -36,10 +53,9 @@ public class LoginInterceptor implements HandlerInterceptor {
 					//NO Case
 					} else if (session.getAttribute("isRsvpd").toString().equalsIgnoreCase("no")) {
 						
-						if (!request.getRequestURI().equalsIgnoreCase(request.getContextPath() + "/rsvp") && 
-								!request.getRequestURI().equalsIgnoreCase(request.getContextPath() + "/check")) {
-							System.out.println("sending to /rsvp");
-							response.sendRedirect(request.getContextPath() + "/rsvp");
+						if (!request.getRequestURI().equalsIgnoreCase(request.getContextPath() + "/check")) {
+							System.out.println("sending to /check");
+							response.sendRedirect(request.getContextPath() + "/check");
 						}
 					}
 
@@ -55,6 +71,12 @@ public class LoginInterceptor implements HandlerInterceptor {
 		}
 		
 		return true;
+	}
+
+	@Override
+	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
+			ModelAndView modelAndView) throws Exception {
+		response.setHeader("X-XSS-Protection", "1;mode=block");
 	}
 
 }

@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.owasp.encoder.Encode;
 import org.owasp.esapi.ESAPI;
 
 @Entity
@@ -70,7 +71,7 @@ public class Guest {
 	}
 
 	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+		this.firstName = Encode.forHtml(firstName);
 	}
 
 	public String getLastName() {
@@ -78,7 +79,7 @@ public class Guest {
 	}
 
 	public void setLastName(String lastName) {
-		this.lastName = lastName;
+		this.lastName = Encode.forHtml(lastName);
 	}
 
 	public String getEmail() {
@@ -86,7 +87,7 @@ public class Guest {
 	}
 
 	public void setEmail(String email) {
-		this.email = email;
+		this.email = Encode.forHtml(email);
 	}
 
 	public String getGuestNames() {
@@ -94,7 +95,7 @@ public class Guest {
 	}
 
 	public void setGuestNames(String guestNames) {
-		this.guestNames = guestNames;
+		this.guestNames = Encode.forHtml(guestNames);
 	}
 
 	public int getPlusOne() {
@@ -118,7 +119,7 @@ public class Guest {
 	}
 
 	public void setComments(String comments) {
-		this.comments = comments;
+		this.comments = Encode.forHtml(comments);
 	}
 
 	public int getRsvpd() {

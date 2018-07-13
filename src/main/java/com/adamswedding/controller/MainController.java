@@ -12,9 +12,14 @@ import groovy.ui.Console;
 @Controller
 public class MainController {
 	
-	@RequestMapping("/")
+	@RequestMapping("/*")
 	public String defaultHandler(){
 		return "login";
+	}
+	
+	@RequestMapping("/")
+	public String defaultHandlerTwo(){
+		return "home";
 	}
 	
 	@RequestMapping("/check")
@@ -32,11 +37,6 @@ public class MainController {
 	public String showHome(){
 		System.out.println("in showHome");
 		return "home";
-	}
-	
-	@RequestMapping("/how-to-get-there")
-	public String showHowTo(){
-	return "how-to-get-there";
 	}
 	
 	@RequestMapping("/wedding-party")
