@@ -22,9 +22,17 @@
 
 	<!-- Step 4: Add support for conversion, formatting and validation support -->
 	<mvc:annotation-driven/>
+	
+	<mvc:default-servlet-handler/>
+	
+	<!-- Interceptors -->
+	<mvc:interceptors>
+	    <bean id="loginInterceptor" class="com.adamswedding.interceptor.LoginInterceptor"/>
+	</mvc:interceptors>
 
 	<!-- Step 5: Define Spring MVC view resolver -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
@@ -34,9 +42,9 @@
           destroy-method="close">
           
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/adams_wedding?useSSL=false" />
-        <property name="user" value="weddinguser" />
-        <property name="password" value="Bb7770099" /> 
+        <property name="jdbcUrl" value="jdbc:mysql://happilyadamsafter:3306/happimq0_weddingdb?useSSL=false" />
+        <property name="user" value="happimq0_dbuser" />
+        <property name="password" value="Pr[D9C8?HPGh" /> 
 
         <!-- these are connection pool properties for C3P0 -->
         <property name="minPoolSize" value="5" />

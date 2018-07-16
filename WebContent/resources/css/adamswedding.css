@@ -15,7 +15,7 @@ body, html {
 	padding-right: .3rem;
 }
 body {
-	background-image: url("https://dl.dropboxusercontent.com/s/0x2rnwhelwg91z2/keith-misner-308-unsplash.jpg?dl=0");
+	background-image: url("https://res.cloudinary.com/daeklz7vq/image/upload/v1523295506/keith-misner-308-unsplash.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100%;
@@ -26,3 +26,16 @@ body {
 .navbar-light .navbar-nav .nav-link {
     color: rgb(6, 4, 4);
 }
+.footer {
+  position: static;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.1rem;
+  opacity: .8;
+}
+
